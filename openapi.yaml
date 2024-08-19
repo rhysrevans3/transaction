@@ -148,13 +148,15 @@ paths:
         - $ref: "#/components/parameters/IfMatchOptional"
       requestBody:
         content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/mergePatchItem"
           application/merge-patch+json:
             schema:
               $ref: "#/components/schemas/mergePatchItem"
           application/json-patch+json:
             schema:
               $ref: "#/components/schemas/patchRequest"
-          
       responses:
         "200":
           description: The item was updated
