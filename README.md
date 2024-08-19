@@ -86,7 +86,7 @@ All cases:
 - Must return 404 if no Item exists for this resource URI.
 - If the `id` or `collection` fields are different from those in the URI, status code 400 shall be returned.
 
-PATCH is compliant with [RFC 7396](https://tools.ietf.org/html/rfc7396) through `application/json-merge+json` and
+PATCH is compliant with [RFC 7396](https://tools.ietf.org/html/rfc7396) through `application/merge-patch+json` and
 [RFC 6902](https://tools.ietf.org/html/rfc6902) through `application/json-patch+json`.
 
 ### DELETE
