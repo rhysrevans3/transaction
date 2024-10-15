@@ -137,10 +137,12 @@ paths:
     patch:
       summary: update an existing feature by Id with a partial item definition
       description: >-
-        Use this method to update an existing feature. merge-patch adheres to RF7396 and requires a GeoJSON
-        fragment (containing the fields to be updated) be submitted. Null values in the merge patch are
-        given special meaning to indicate the removal of existing values in the target. json-patch adheres
-        to RF6902 and requires a sequence of opperations to perform on the target feature.
+        Use this method to update an existing feature. The default method, merge-patch adheres to RF7396
+        and requires a GeoJSON fragment (containing the fields to be updated) be submitted. Null values in
+        the merge patch are given special meaning to indicate the removal of existing values in the
+        target. Optionally json-patch, which adheres to RF6902 and requires a sequence of opperations to
+        perform on the target feature, can be included. The two methods can be distinguished via the
+        Accept/Content-Type header.
       operationId: patchFeature
       tags:
         - Transaction
